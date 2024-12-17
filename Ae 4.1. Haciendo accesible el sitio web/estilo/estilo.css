@@ -1,0 +1,421 @@
+/* Variables de colores para los diferentes temas #ec1d1d; */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #ec1d1d;
+    --shadow-color: #888888;
+
+    --bg-color-dark: #1e1e1e;
+    --text-color-dark: #f5f5f5;
+    --accent-color-dark: #ff4444;
+    --shadow-color-dark: #444444;
+    font-size: 12pt;
+    --font-size-base: 1rem; /* Tamaño base del body */
+    --font-size-step: 0.125rem; /* Incrementos de*/
+
+}
+
+@font-face {
+    font-family: 'YujiMai';
+    src: url('tipografias/YujiMai-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+
+/* Botones */
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+  
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: var(--accent-color);
+    color: var(--text-color-dark);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 1em;
+}
+
+/* Sección superior de la barra */
+.navbar .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+}
+
+/* Logo */
+.logo img {
+    height: 40px; 
+    cursor: pointer; 
+}
+
+.user-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+    width: 90%; 
+    margin: 0.5em 0; 
+}
+
+.search-bar input {
+    width: 100%; 
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Hace que la imagen "Modo" sea tocable */
+.mode-icon {
+    height: 40px;
+    cursor: pointer; 
+    margin-left: 10px; 
+}
+
+
+
+
+/* Estilo para el menú de navegación */
+.Navegacion {
+    background-color: var(--accent-color); 
+    margin: 0; 
+    padding: 0.5em 0; 
+}
+
+.Navegacion ul {
+    list-style: none; 
+    display: flex; 
+    justify-content: space-around; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.Navegacion li {
+    text-align: center;
+}
+
+.Navegacion a {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 1em; 
+}
+
+.Navegacion a:hover {
+    text-decoration: underline; 
+}
+
+/* MainAside contenedor */
+.MainAside {
+    display: flex;
+    flex-direction: column-reverse; 
+
+}
+
+
+/* Estilo para el aside */
+.MainAside aside {
+    background-image: url("../Imagenes/FondoMK.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 1em; 
+    margin-top: 0em; 
+    
+}
+
+/* Título del aside */
+.AsideTitulo {
+    text-align: center;
+    color: #000000; 
+    font-size: 2em; 
+    margin: 0; 
+}
+
+/* Listado dentro del aside */
+.MainAside aside ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0.5em 0 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 1em; 
+}
+
+.MainAside aside li {
+    text-align: center; 
+}
+
+.MainAside aside a {
+    color: #000000; 
+    text-decoration: none; 
+}
+
+.MainAside aside a:hover {
+    text-decoration: underline; 
+}
+
+/* Estilo para el main */
+.MainAside main {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1em; 
+    margin: 0;
+}
+
+/* Estilo para los artículos */
+.MainAside main article {
+    display: flex; 
+    align-items: center; 
+    gap: 1em; 
+    padding: 1em; 
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(177, 13, 13, 0.1); 
+    margin: 1em; 
+}
+
+/* Imagen dentro del artículo */
+.MainAside main article img {
+    height: 80px; 
+    object-fit: contain; 
+}
+
+/* Nombre del producto */
+.MainAside main article .NombreGafas {
+    font-weight: bold; 
+    font-size: 1em; 
+    margin: 0; 
+}
+
+/* Precio del producto */
+.MainAside main article .NombrePrecio {
+    color: var(--accent-color);
+    font-weight: bold; 
+    margin: 0; 
+}
+
+/* Reputación del producto */
+.MainAside main article .NombreRep {
+    color: #333333; 
+    font-size: 0.9em; 
+    margin: 0; 
+}
+
+
+
+
+/* Estilos globales */
+body {
+    background-color: var(--bg-color);
+    font-size: var(--font-size-base); /* Tamaño intermedio inicial */
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Estilos para el footer */
+footer {
+    font-family: Arial, sans-serif;
+}
+
+/* Parte superior gris del footer */
+.footer-top {
+    
+    display: grid; 
+    grid-template-columns: repeat(1, 1fr); 
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #3c3c3c;
+    color: #ffffff;
+
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Parte inferior negra del footer */
+.footer-bottom {
+    background-color: #222222;
+    padding: 20px;
+    color: #cccccc;
+    font-size: 0.85em;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+}
+
+.footer-bottom p strong {
+    color: #ffffff;
+}
+
+
+
+/* Ajustes para pantallas entre 576px  y 911px */
+@media (min-width: 576px) and (max-width: 911px ) {
+
+    body {
+        font-family: 'YujiMai', sans-serif; 
+    }
+    .MainAside main {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1em; 
+    }
+
+    .footer-top {
+    
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        justify-content: space-around;
+        padding: 20px;
+        background-color: #3c3c3c;
+        color: #ffffff;
+    
+    }
+}
+
+
+/* Ajustes para pantallas entre 912px  y 1023px */
+@media (min-width: 912px) and (max-width: 1023px ) {
+
+    .MainAside {
+        display: grid; 
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .MainAside main {
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 1em; 
+    }
+    .MainAside aside {
+        margin-top: 0; 
+        order: 2; 
+    }
+
+    .MainAside aside ul {
+        display: block; 
+        text-align: center; 
+        padding: 0; 
+        margin: 1em 0; 
+    }
+
+    .footer-top {
+    
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); 
+        justify-content: space-around;
+        padding: 20px;
+        background-color: #3c3c3c;
+        color: #ffffff;
+    
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .MainAside {
+        display: grid; 
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .MainAside main {
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 1em; 
+    }
+    .MainAside aside {
+        margin-top: 0; 
+        order: 2; 
+    }
+
+    .MainAside aside ul {
+        display: block; 
+        text-align: center; 
+        padding: 0; 
+        margin: 1em 0; 
+    }
+
+    .footer-top {
+    
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        justify-content: space-around;
+        padding: 20px;
+        background-color: #3c3c3c;
+        color: #ffffff;
+    
+    }
+
+}
